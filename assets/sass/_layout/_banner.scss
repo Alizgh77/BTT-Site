@@ -1,0 +1,499 @@
+/*Hero Section Starts Here*/
+.hero-section {
+    position: relative;
+    >div {
+        position: relative;
+        z-index: 1;
+    }
+    background-color: #1a3db9;
+    padding: 150px 0 160px;
+    overflow: hidden;
+    @include breakpoint(max-lg) {
+        padding: 180px 0 130px;
+    }
+}
+.hero-shape {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @media screen and (min-width:1800px) {
+        left: 50px;
+        top: -600px;
+        right: 50px;
+    }
+}
+.hero-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    .hero-content {
+        max-width: 600px;
+        width: 100%;
+    }
+    .hero-thumb {
+        width: calc(100% - 600px);
+    }
+    .hero-content-3 {
+        max-width: 100%;
+        text-align: center;
+        p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+.hero-content {
+    .hero-title {
+        margin-bottom: 36px;
+    }
+    .hero-txt {
+        margin-bottom: 45px;
+    }
+    @include breakpoint(max-sm) {
+        .hero-title {
+            margin-bottom: 20px;
+        }
+        .hero-txt {
+            margin-bottom: 30px;
+        }
+    }
+}
+.hero-button-group {
+    margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    a {
+        margin: 10px;
+    }
+}
+.hero-section-2 {
+    padding: 250px 0 240px;
+    overflow: hidden;
+    @extend %bg-2;
+    position: relative;
+    @include breakpoint(max-xl) {
+        padding: 200px 0 140px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 160px 0 100px;
+    }
+}
+.hero-token-sell {
+    background: #361089;
+    width: calc(100% - 630px);
+    max-width: 480px;
+    border-radius: 15px;
+    padding: 20px 0;
+    .hero-token-sell-body {
+        padding: 40px 25px 0;
+        @include breakpoint(max-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .hero-token-sell-footer {
+        padding: 20px 25px;
+        border-top: 1px solid rgba(248, 248, 248, .25);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba($color:$white-color, $alpha:.9);
+        @include breakpoint(max-sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .hero-token-title {
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .cmn--btn {
+        background: #703be3;
+    }
+    @include breakpoint(sm) {
+        .hero-token-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .amount {
+            font-size: 22px;
+            font-weight: 600;
+        }
+    }
+    .min-title {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+.hero-token-area {
+    border: 1px solid rgba(248, 248, 248, .25);
+    @include border-radius(5px);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .hero-token-item {
+        padding: 10px;
+        * {
+            color: $white-color;
+        }
+        .hero-token-item-title {
+            font-size: 18px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .token-rate {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .accept-currency {
+            @extend %flex;
+            margin: -3px;
+            li {
+                padding: 3px;
+                i {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    @include border-radius(50%);
+                    text-align: center;
+                    background: rgba($color:$white-color, $alpha:.1);
+                }
+            }
+        }
+    }
+}
+.header-wrapper-2 {
+    .hero-token-sell {
+        width: calc(100% - 530px);
+    }
+    @include breakpoint(max-xl) {
+        .hero-content {
+            max-width: 500px;
+        }
+    }
+    @include breakpoint(max-lg) {
+        .hero-content {
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+        .hero-token-sell {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+.banner-form {
+    max-width: 460px;
+    margin: 0 auto;
+    .cmn--btn {
+        min-width: 150px;
+        font-weight: 400;
+        background: #05b169;
+    }
+}
+.banner--form-control {
+    height: 50px;
+    @include border-radius(5px);
+    background: $white-color;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.hero-section-3 {
+    padding: 215px 0 400px;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(max-lg) {
+        padding: 180px 0 350px;
+    }
+}
+.hero-section-5 {
+    padding: 160px 0;
+    position: relative;
+    .hero-shape {
+        background-color: #2d096e;
+        @include border-radius(0 0 50% 50%);
+        @include breakpoint(max-lg) {
+            @include border-radius(0 0 30% 30%);
+        }
+        @include breakpoint(max-md) {
+            @include border-radius(0);
+        }
+    }
+    @include breakpoint(max-lg) {
+        padding-bottom: 100px;
+    }
+}
+.hero-section-9 {
+    padding: 180px 0 140px;
+    position: relative;
+    .hero-shape {
+        background-color: rgba(67, 61, 112, .2);
+        @include border-radius(0 0 50% 50%);
+        @include breakpoint(max-lg) {
+            @include border-radius(0 0 30% 30%);
+        }
+        @include breakpoint(max-md) {
+            @include border-radius(0);
+        }
+    }
+    @include breakpoint(max-lg) {
+        padding-bottom: 100px;
+    }
+    @include breakpoint(max-md) {
+        padding-bottom: 60px;
+    }
+}
+.hero-wrapper-5 {
+    position: relative;
+    .hero-thumb {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+        margin-bottom: 75px;
+    }
+    .hero-content {
+        max-width: 625px;
+        margin: 0 auto;
+        .hero-button-group {
+            .cmn--btn {
+                background: $theme-seven;
+                @include border-radius(25px);
+                &.btn--white {
+                    background: $white-color;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        .hero-thumb {
+            margin-bottom: 30px;
+        }
+    }
+}
+.hero-section-6 {
+    padding: 215px 0 110px;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(max-lg) {
+        padding: 180px 0 100px;
+    }
+    @include breakpoint(max-md) {
+        padding: 160px 0 110px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 140px 0 100px;
+    }
+}
+.hero-wrapper-6 {
+    .video--btn {
+        background: $theme-eight;
+        &::before, &::after {
+            background: $theme-eight;
+        }
+    }
+}
+.hero-title {
+    .underline {
+        display: inline;
+        border-bottom: 3px solid $white-color;
+    }
+}
+.mw--585 {
+    max-width: 585px !important;
+}
+.hero-section-4 {
+    padding: 200px 0 140px;
+    position: relative;
+    @include breakpoint(max-lg) {
+        padding-bottom: 100px;
+    }
+}
+
+.hero-content {
+    .countdown {
+        max-width: 385px;
+        margin: 0 0 20px;
+        li {
+            text-align: center;
+            min-width: 0;
+            padding: 15px 0 15px;
+            margin: 0 8px 20px;
+            border: 1px solid rgba($color:$white-color, $alpha:.1);
+            width: 70px;
+            flex-grow: 1;
+            @include border-radius(5px);
+            .title {
+                font-weight: 500;
+                font-size: 24px;
+                margin: 0;
+                margin-bottom: 10px;
+                line-height: 1;
+            }
+            p {
+                font-size: 14px;
+                color: $theme-ten;
+                text-transform: capitalize;
+            }
+        }
+    }
+    @media screen and (max-width:400px) {
+        .countdown {
+            justify-content: space-between;
+            margin-left: -10px;
+            margin-right: -10px;
+            li {
+                width: calc(50% - 20px);
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.clippy--7 {
+    @include breakpoint(lg) {
+        padding-bottom: 140px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), 0% 100%);
+    }
+    @include breakpoint(xl) {
+        padding-bottom: 200px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 150px), 0% 100%);
+    }
+    @include breakpoint(xxl) {
+        padding-bottom: 250px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 200px), 0% 100%);
+    }
+}
+.clippy--7-rev {
+    @include breakpoint(lg) {
+        padding-bottom: 140px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+    }
+    @include breakpoint(xl) {
+        padding-bottom: 200px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 150px));
+    }
+    @include breakpoint(xxl) {
+        padding-bottom: 250px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 200px));
+    }
+}
+.hero-section-7 {
+    padding: 250px 0 330px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ff4949;
+    @include breakpoint(max-xl) {
+        padding: 200px 0 140px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 160px 0 100px;
+    }
+}
+.inset-0 {
+    position: absolute;
+    inset: 0;
+}
+.bg--red {
+    background: #f23b3b;
+}
+@include breakpoint(lg) {
+    .mt-90 {
+        margin-top: 90px;
+    }
+    .mt-160 {
+        margin-top: 160px;
+    }
+}
+.bottom-shape {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    width: 101%;
+    min-width: 1920px;
+}
+.top-shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    width: 101%;
+    min-width: 1920px;
+}
+.hero-section-8 {
+    padding: 215px 0 540px;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(max-lg) {
+        padding: 180px 0 350px;
+    }
+}
+.mt--420 {
+    position: relative;
+    margin-top: -420px;
+    @include breakpoint(max-lg) {
+        margin-top: -300px;
+    }
+}
+.hero-section-10 {
+    position: relative;
+    background-color: #1a3db9;
+    padding: 150px 0 260px;
+    overflow: hidden;
+    @include breakpoint(max-xl) {
+        padding: 180px 0 150px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 180px 0 130px;
+    }
+    .container {
+        position: relative;
+    }
+}
+.page-header-section {
+    position: relative;
+    background-color: #1a3db9;
+    padding: 247px 0 156px;
+    overflow: hidden;
+    @include breakpoint(max-xl) {
+        padding: 180px 0 100px;
+    }
+    .container {
+        position: relative;
+    }
+}
+.page-content {
+    text-align: center;
+    .title {
+        color: $white-color;
+        margin-bottom: 10px;
+    }
+    .breadcrumb {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        li {
+            padding: 0;
+            a {
+                text-decoration: none;
+                color: $white-color;
+                &::after {
+                    content: "/";
+                    margin: 0 5px;
+                }
+            }
+            color: $white-color;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+/*
+01. Reset CSS Start
+---------------------------
+02. General CSS
+---------------------------
+03. Section Title CSS
+---------------------------
+04. Hero Section CSS
+---------------------------
+05. Team  Section CSS
+---------------------------
+05. Documents Section CSS
+---------------------------
+06. Faqs  Section CSS
+---------------------------
+07. Contact  Section CSS
+---------------------------
+08. Why Section CSS
+---------------------------
+09. About Section CSS
+---------------------------
+10. Structure Section CSS
+---------------------------
+11. Road Map Section CSS
+---------------------------
+12. Bonus Stages Section CSS
+---------------------------
+13. Token Section CSS
+---------------------------
+14. Video Section CSS
+---------------------------
+15. Benifit  Section CSS
+---------------------------
+16. How  Section CSS
+---------------------------
+17. Footer Section CSS
+---------------------------
+*/
+
+
+@import '_abstracts/_mixins';
+@import '_abstracts/_variables';
+@import '_base/_reset';
+@import '_base/_global';
+@import '_base/_typography';
+@import '_base/_about';
+@import '_layout/_footer';
+@import '_layout/_forms';
+@import '_layout/_header';
+@import '_layout/_banner';
+@import '_layout/_sidebar';
+@import '_layout/_section';
+@import '_layout/_animation';
+@import '_layout/_blog';
+@import '_components/_buttons';
+@import '_components/_color';

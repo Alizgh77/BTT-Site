@@ -1,0 +1,150 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: $body-color;
+    line-height: 30px;
+    overflow-x: hidden;
+    font-family: $body;
+    background: $body-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    color: $title-color;
+    font-family: $body;
+    a {
+        color: $title-color;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+h1 {
+    font-size: 40px
+}
+h2 {
+    font-size: 28px;
+    margin-top: -9px;
+}
+h3 {
+    font-size: 24px;
+    margin-top: -8px;
+}
+h4 {
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: -5px;
+}
+h5 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: -4px;
+}
+h6 {
+    font-size: 18px;
+    margin-top: -6px;
+    font-weight: 400;
+}
+p {
+    margin-top: -9px;
+    &:last-child {
+        margin-bottom: -7px !important;
+    }
+}
+@include breakpoint (sm) {
+    h1 {
+        font-size: 48px
+    }
+    h2 {
+        font-size: 40px;
+        margin-top: -11px;
+    }
+    h3 {
+        font-size: 30px;
+        margin-top: -9px;
+    }
+    h4 {
+        font-size: 22px;
+        line-height: 36px;
+        margin-top: -7px;
+    }
+    h5 {
+        font-size: 20px;
+        margin-top: -5px;
+    }
+}
+@include breakpoint (md) {
+    h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: -9px;
+    }
+    h4 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: -8px;
+    }
+    h5 {
+        font-size: 22px;
+        margin-top: -7px;
+    }
+}
+a {
+    display: inline-block;
+    @include transition($transition);
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 5px 0;
+    }
+}
+label,
+button,
+select {
+    cursor: pointer;
+}
+.bg_img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg_contain {
+    background-size: contain;
+}
+.fw--semibold {
+    font-weight: 600;
+}
+.fw--medium {
+    font-weight: 500;
+}
+.fw--regular {
+    font-weight: 400;
+}

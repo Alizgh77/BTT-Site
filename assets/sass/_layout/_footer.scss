@@ -1,0 +1,289 @@
+/*Footer Section*/
+.sponsor-area {
+    @extend %flex;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+.sponsor-thumb {
+    flex: 0 0 220px;
+    padding: 0 15px 45px;
+    a {
+        display: block;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+    @include breakpoint(max-xl) {
+        flex: 0 0 180px;
+        padding: 0 15px 35px;
+    }
+    @include breakpoint(max-lg) {
+        flex: 0 0 140px;
+    }
+}
+.subscribe-form {
+    input {
+        height: 60px;
+        background: $section-bg;
+        outline: none;
+        border-radius: 5px 0 0 5px;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    button {
+        @extend %bg-1;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+        outline: none;
+        color: $white-color;
+    }
+    @include breakpoint(max-sm) {
+        input {
+            height: 50px;
+        }
+        button {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+        }
+    }
+}
+.copyright {
+    font-size: 15px;
+}
+.quick-links {
+    @extend %flex;
+    margin: 0 -8px;
+    a {
+        padding: 0 8px;
+        color: $body-color;
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: 15px;
+        &:hover {
+            color: $theme-one;
+        }
+    }
+}
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    padding: 15px 0;
+    border-top: 1px solid #e5e5e5;
+    &.text-white {
+        border-color: rgba($color:$white-color, $alpha:.2);
+        .quick-links {
+            li {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .quick-links {
+        li {
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+}
+.footer-section {
+    .container, .container-fluid {
+        position: relative;z-index: 1;
+    }
+}
+.footer-shape {
+    max-height: 300px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+@include  breakpoint(max-lg) {
+    .footer-widget {
+        text-align: center;
+    }
+    .footer-logo {
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        a {
+            display: block;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+.footer__title {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.subscribe-form-2 {
+    .form--control {
+        padding: 0 15px;
+        height: 50px;
+        @include border-radius(5px);
+    }
+}
+.footer-widget {
+    p {
+        margin: 0;
+    }
+}
+.footer__links {
+    li {
+        padding: 0;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: rgba($color:$white-color, $alpha:.8);
+            &:hover {
+                color: $white-color;
+            }
+        }
+    }
+}
+.social-icons-2 {
+    @extend %flex;
+    margin: -5px;
+    li {
+        padding: 5px;
+        a {
+            padding: 5px;
+            color: rgba($color:$white-color, $alpha:.5);
+            &:hover {
+                color: $white-color;
+            }
+        }
+    }
+}
+.circle-1 {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.02;
+    width: 777px;
+    height: 777px;
+    position: absolute;
+    right: calc(50% - 100px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.circle-2 {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.02;
+    width: 247px;
+    height: 247px; 
+    position: absolute; 
+    left: calc(50% + 250px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-section-2 {
+    .container, .footer-bottom {
+        position: relative;
+    }
+}
+.bg--dark-8 {
+    .circle-1,
+    .circle-2 {
+        opacity: .01;
+    }
+}
+/*Footer Three*/
+.footer__three-wrapper {
+    max-width: 690px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    .title {
+        margin-bottom: 20px;
+    }
+    .subscribe-form {
+        input {
+            height: 70px;
+            background: $white-color;
+            margin-right: 20px;
+            @include border-radius(5px !important);
+        }
+        button {
+            @include border-radius(5px !important);
+        }
+    }
+    .social-icons {
+        margin-top: 30px;
+        li {
+            a {
+                i {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    border: 1px solid $border-color;
+                    &:hover {
+                        border-color: transparent;
+                    }
+                    @include breakpoint(max-sm) {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-section-3 {
+    .footer-shape {
+        max-height: 100%;
+    }
+}
+.top-clippy {
+    clip-path: polygon(0 250px, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 250px;
+    @include breakpoint(max-xxl) {
+        clip-path: polygon(0 150px, 100% 0, 100% 100%, 0% 100%);
+        padding-top: 150px;
+    }
+    @include breakpoint(max-xl) {
+        clip-path: polygon(0 100px, 100% 0, 100% 100%, 0% 100%);
+        padding-top: 100px;
+    }
+    @include breakpoint(max-lg) {
+        clip-path: unset;
+        padding-top: 100px;
+    }
+}
+.mb--285 {
+    position: relative;
+    margin-bottom: -285px;
+    z-index: 1;
+    @include breakpoint(max-xxl) {
+        margin-bottom: -170px;
+    }
+    @include breakpoint(max-xl) {
+        margin-bottom: -130px;
+    }
+    @include breakpoint(max-lg) {
+        margin-bottom: -100px;
+    }
+}
+.mb--60 {
+    margin-bottom: -60px;
+}
+.map-shape {
+    position: absolute;
+    inset: 0;
+    left: calc(50% - 100px);
+}
