@@ -41,14 +41,14 @@
   }
   $(document).ready(function () {
     $('.countdown').countdown({
-        date: '11/09/2024 05:00:00',
-        offset: +2,
-        day: 'Day',
-        days: 'Days'
-    }, 
-    function () {
-        
-    });
+      date: '11/09/2024 05:00:00',
+      offset: +2,
+      day: 'Day',
+      days: 'Days'
+    },
+      function () {
+
+      });
     $('.sponsor-slider').owlCarousel({
       loop: false,
       responsiveClass: true,
@@ -58,7 +58,7 @@
       autoplayTimeout: 1500,
       autoplayHoverPause: true,
       margin: 30,
-      items:1,
+      items: 1,
       responsive: {
         400: {
           items: 2,
@@ -83,7 +83,7 @@
       autoplayTimeout: 1500,
       autoplayHoverPause: true,
       margin: 0,
-      items:1,
+      items: 1,
       responsive: {
         426: {
           items: 2,
@@ -105,7 +105,7 @@
       autoplayTimeout: 1500,
       autoplayHoverPause: true,
       margin: 20,
-      items:1,
+      items: 1,
       responsive: {
         768: {
           items: 2,
@@ -252,3 +252,30 @@
     });
   });
 })(jQuery);
+
+
+"use strict"
+$(window).on("load", function () {
+  $('.btn-forget').on('click', function (e) {
+    e.preventDefault();
+    var inputField = $(this).closest('form').find('input');
+    if (inputField.attr('required') && inputField.val()) {
+      $('.error-message').remove();
+      $('.form-items', '.form-content').addClass('hide-it');
+      $('.form-sent', '.form-content').addClass('show-it');
+    } else {
+      $('.error-message').remove();
+      $('<small class="error-message">Please fill the field.</small>').insertAfter(inputField);
+    }
+
+  });
+
+  $('.btn-tab-next').on('click', function (e) {
+    e.preventDefault();
+    $('.nav-tabs .nav-item > .active').parent().next('li').find('a').trigger('click');
+  });
+  $('.custom-file input[type="file"]').on('change', function () {
+    var filename = $(this).val().split('\\').pop();
+    $(this).next().text(filename);
+  });
+});
