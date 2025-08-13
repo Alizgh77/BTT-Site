@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./assets/css/nice-select.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 
+    <link rel="preload" href="/assets/fonts/Pinar.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="shortcut icon" href="assets/images/logo/Logo BTT.png" type="image/x-icon">
 </head>
 
@@ -42,9 +44,9 @@
                 <div class="logo">
                     <a href="index-2.html"><img src="assets/images/logo/Logo BTT.png" alt="logo"></a>
                 </div>
-                <ul class="menu">
-                    <li>
-                        <!--<a href="#">خانه</a>
+                <ul class="menu col-lg-4 ">
+                    <!--<li>
+                        <a href="#">خانه</a>
                             <ul class="submenu">
                             <li>
                                 <a href="index.html">Home 1</a>
@@ -76,13 +78,13 @@
                             <li>
                                 <a href="index-10.html">Home 10</a>
                             </li>
-                        </ul>-->
+                        </ul>
+                    </li>-->
+                    <li>
+                        <a href="error-404.html">مسابقات</a>
                     </li>
                     <li>
-                        <a href="#tokens">مسابقات</a>
-                    </li>
-                    <li>
-                        <a href="#road">قوانین</a>
+                        <a href="error-404.html">قوانین</a>
                     </li>
                     <li>
                         <a href="about.html">درباه ما</a>
@@ -90,8 +92,8 @@
                     <li>
                         <a href="contact.html">تماس با ما</a>
                     </li>
-                    <li>
-                        <!-- <a href="#how">Pages</a>
+                    <!--<li>
+                         <a href="#how">Pages</a>
                         <ul class="submenu">
                             <li>
                                 <a href="about.html">About Us</a>
@@ -105,15 +107,16 @@
                             <li>
                                 <a href="error-404.html">404 Error</a>
                             </li>
-                        </ul>-->
+                        </ul>
                     </li>
-                    <!--<li>
+                    <li>
                         <a href="contact.html">Contact</a>
-                    </li> -->
+                    </li>
+                -->
                     <li>
                         <div class="header-buttons d-flex flex-wrap justify-content-center d-md-none">
                             <a href="register11.html" class="cmn--btn btn--transparent m-3">ثبت نام</a>
-                            <a href="login.html" class="cmn--btn m-3">ورود</a>
+                            <a href="login11.html" class="cmn--btn m-3">ورود</a>
                         </div>
                     </li>
                 </ul>
@@ -145,46 +148,28 @@
         <div class="container">
             <div class="hero-wrapper header-wrapper-2 justify-content-between">
                 <div class="hero-content cl-white wow fadeInUp">
-                    <h1 class="hero-title fw--regular"><span class="d-md-block">مسابقه ترید حرفه‌ای</span>
+                    <h1 class="hero-title fw--regular"><span class="d-md-block">بک‌تست تریدینگ</span>
                     </h1>
                     <p class="hero-txt">
-                        در گذشته، آینده را پیش‌بینی کن
+                        اولین برگذار‌کننده مسابقات ترید در فضای بک‌تست
                     </p>
+                    <!-- Bubbles -->
+                    <div class="feature-bubbles" dir="rtl" aria-label="ویژگی‌ها">
+                        <div class="bubble bubble--lg">برداشت<br>بدون محدودیت زمانی</div>
+                        <div class="bubble bubble--md">اعلام آنی نتایج<br>و واریز جوایز</div>
+                        <div class="bubble bubble--sm">قوانین ساده<br>و شفاف</div>
+                        <div class="bubble bubble--md">شرایط برد-برد</div>
+                        <div class="bubble bubble--sm">نسل سوم<br>پراپ تریدینگ</div>
+                    </div>
                     <div class="hero-button-group">
                         <!--<a href="#0" class="cmn--btn btn--transparent">WHITE PAPER</a>-->
-                        <a href="#0" class="cmn--btn btn--white">شروع کن</a>
+                        <a href="#0" class="cmn--btn">شروع کن ...</a>
                     </div>
                 </div>
-                <div class="hero-token-sell wow fadeInLeft">
-                    <div class="hero-token-sell-body">
-                        <h4 class="hero-token-title text-white text-center">شرایط مسابقه</h4>
-                        <!--<div class="hero-token-area">
-                            <div class="hero-token-item">
-                                <h6 class="hero-token-item-title">
-                                    Token Price:
-                                </h6>
-                                <h5 class="token-rate">1 BTC = $0.05</h5>
-                            </div>
-                            <div class="hero-token-item">
-                                <h6 class="hero-token-item-title">
-                                    We Accept
-                                </h6>
-                                <ul class="accept-currency">
-                                    <li>
-                                        <i class="las la-dollar-sign"></i>
-                                    </li>
-                                    <li>
-                                        <i class="lab la-bitcoin"></i>
-                                    </li>
-                                    <li>
-                                        <i class="lab la-ethereum"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>-->
-                        <div class="d-flex flex-wrap justify-content-between py-2">
-                            <span class="m-2 text-white">باید شرایط مسابقه رو بگیم </span>
-                            <h5 class="amount m-2 text-white">یه سری متن و عدد مثلا</h5>
+                <div class="hero-token-sell">
+                    <div class="col-lg-12">
+                        <div class="about--thumb wow fadeInCenter">
+                            <img src="assets/images/hero/Hero section image.png" alt="about">
                         </div>
                     </div>
                     <!--<div class="hero-token-sell-footer">
@@ -201,8 +186,86 @@
     <!-- Hero Section -->
 
 
+    <!-- Benifit Token Section -->
+    <section class="benifit-token-section pt-120 pb-120">
+        <div class="container">
+            <div class="section-header section-header-center wow fadeInUp">
+                <h2 class="section-title cl-2 fw--medium">چرا بک‌تست تریدینگ ...؟</h2>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/1.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            کمک به تریدرها برای تمرین، رقابت و سودآوری از تحلیل بازار، بدون نیاز به ریسک سرمایه واقعی
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/2.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            آماده کردن بستری برای آموزش ترید قبل از ورود به لایو مارکت
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/3.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            تسحیل گری در زمینه ی پیدا کردن استراتژی
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/4.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            کاهش هزینه برای تریدرهای تازه کار
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/5.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            آماده‌سازی فضایی شفاف برای پیدا‌کردن تریدرهای سود‌ده
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
+                    <div class="benifit__card">
+                        <div class="benifit__card-thumb">
+                            <img src="./assets/images/benifit/6.png" alt="benifit">
+                        </div>
+                        <h4 class="benifit__card-title"> </h4>
+                        <p>
+                            ارزیابی نتیجه ی استراتژی ها به دور از احساسات
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>--
+    <!-- Benifit Token Section -->
+
     <!-- About Section -->
-    <section class="about-section pb-120 pt-120">
+    <!--<section class="about-section pb-120 pt-120">
         <div class="container">
             <div class="row gy-5">
                 <div class="col-lg-6">
@@ -213,10 +276,11 @@
                 <div class="col-lg-6">
                     <div class="about--content wow fadeInUp">
                         <div class="section-header mb-4">
-                            <h6 class="section-name cl-2">درباره ما</h6>
+                            <h2 class="section-title fw--regular cl-2">در گذشته، آینده را پیش‌بینی کن</h2>
+                            <h6 class="section-name cl-2">در گذشته، آینده را پیش‌بینی کن</h6>
                             <h2 class="section-title fw--regular cl-2">در گذشته، آینده را پیش‌بینی کن</h2>
                             <p class="section-text">
-                                یه سری توضحیات مثلا
+                                بدون استرس استراتژی خودتان را محک بزنید
                             </p>
                         </div>
                         <div class="row g-4 justify-content-center">
@@ -265,7 +329,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- About Section -->
 
 
@@ -364,83 +428,7 @@
 
 
 
-    <!-- Benifit Token Section -->
-    <section class="benifit-token-section pt-120 pb-120">
-        <div class="container">
-            <div class="section-header section-header-center wow fadeInUp">
-                <h2 class="section-title cl-2 fw--medium">مزیت‌ها</h2>
-            </div>
-            <div class="row justify-content-center g-4">
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/1.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            کمک به تریدرها برای تمرین، رقابت و سودآوری از تحلیل بازار، بدون نیاز به ریسک سرمایه واقعی
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/2.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            آماده کردن بستری برای آموزش ترید قبل از ورود به لایو مارکت
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/3.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            تصحیل گری در زمینه ی پیدا کردن استراتژی
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/4.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            کاهش هزینه برای تریدرهای تازه کار
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/5.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            کاهش اصحکاک برای پیدا کردن تریدر و سرمایه گذار
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 wow fadeInUp">
-                    <div class="benifit__card">
-                        <div class="benifit__card-thumb">
-                            <img src="./assets/images/benifit/6.png" alt="benifit">
-                        </div>
-                        <h4 class="benifit__card-title"> </h4>
-                        <p>
-                            ارزیابی نتیجه ی استراتژی ها به دور از احساسات
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Benifit Token Section -->
+
 
 
     <!-- Video Section -->
@@ -1560,7 +1548,7 @@
 
 
     <!-- Contact Section -->
-    <section class="contact-section position-relative pt-60 pb-120">
+    <section class="contact-section position-relative pt-60 pb-120 section-bg">
         <div class="container position-relative">
             <div class="section-header section-header-center wow fadeInUp">
                 <h2 class="section-title cl-2 mb-0 fw--medium">تماس با ما </h2>

@@ -5871,6 +5871,86 @@
     width: auto
 }
 
+/* 1) تعریف فونت پینار (WOFF2 اولویت دارد) */
+@font-face {
+    font-family: 'Pinar';
+    src: url('/assets/fonts/Pinar.woff2') format('woff2'),
+        url('/assets/fonts/Pinar.ttf') format('truetype');
+    font-weight: 100 900;
+    /* چون Variable است، کل بازه وزن را پوشش می‌دهد */
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF, U+0600-06FF, U+0750-077F, U+08A0-08FF;
+    /* لاتین + فارسی/عربی */
+}
+
+/* 2) (اختیاری) پیش‌فرض‌های محورهای Variable اگر لازم داشتی
+   فایل شما محورهای DSTY, KSHD, wght دارد.
+   اگر نخواهی دست بزنی، این بخش را حذف کن. */
+:root {
+    /* نمونه: کمی کشیده‌سازی حروف و استایل نمایشی را صفر بگذار */
+    --pinar-dsty: 0;
+    /* Display Style */
+    --pinar-kshd: 0;
+    /* Kashida */
+}
+
+html {
+    /* اگر خواستی روی کل سایت اعمال شود: */
+    font-variation-settings: 'DSTY' var(--pinar-dsty), 'KSHD' var(--pinar-kshd);
+}
+
+/* همه‌جا فونت از body به ارث ببرد */
+*,
+*::before,
+*::after {
+    font-family: inherit;
+}
+
+/* بدنه سایت: از پینار استفاده کن، با fallback امن */
+html,
+body {
+    font-family: 'Pinar', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, 'Noto Sans Arabic', sans-serif;
+    line-height: 1.6;
+}
+
+/* فرم‌ها به‌صورت پیش‌فرض فونت سیستم می‌گیرند؛ مجبورشان کنیم پینار بگیرند */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* برای تیترها بهتره وزن مشخص بدی تا رندر یک‌دست بشه */
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+/* متن عادی */
+p,
+li {
+    font-weight: 400;
+}
+
+/* کدها و فونت‌های ثابت بهتره مونو بمانند */
+code,
+pre,
+kbd,
+samp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+
 @font-face {
     font-family: "Font Awesome 5 Brands";
     font-style: normal;
