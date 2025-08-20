@@ -14,15 +14,26 @@
 
 1. General Styles.
 2. Responsive Styles.
+
 -------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Pinar';
+    src: url('../fonts/Pinar.woff2') format('woff2'),
+        url('../fonts/Pinar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 
 /* -----------------------------------
     1 - General Styles
 ------------------------------------*/
 *,
+
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Pinar', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -37,6 +48,7 @@ body {
 .form-body {
     background-color: #0093FF;
     height: 100%;
+    font-family: 'Pinar', sans-serif !important;
 }
 
 .form-body>.row {
@@ -444,7 +456,7 @@ body {
     display: inline-block;
     width: 100%;
     max-width: 340px;
-    text-align: left;
+    text-align: right;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
@@ -657,7 +669,7 @@ body {
 
 .form-content .custom-file-label:after {
     content: "\f382" !important;
-    font-family: Font Awesome\ 5 Free;
+    font-family: 'Pinar', sans-serif;
     font-style: normal;
     font-weight: 600;
     padding: 0.475rem 0.75rem 0.375rem;
@@ -756,7 +768,7 @@ body {
 .form-content input[type=checkbox]:checked+label:after,
 .form-content input[type=checkbox]:not(:checked)+label:after {
     content: "\f00c";
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Pinar', sans-serif;
     font-style: normal;
     font-weight: 600;
     position: absolute;
@@ -907,6 +919,9 @@ body {
     transition: all 0.3s ease;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-content .form-button .ibtn.ibtn-full {
@@ -1544,7 +1559,7 @@ input.sm-content {
 
 .alert.with-icon[class*=alert-]:before {
     position: absolute;
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Pinar', sans-serif;
     font-style: normal;
     font-weight: 600;
     top: 7px;

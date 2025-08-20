@@ -14,12 +14,23 @@
 /* -----------------------------------
     1 - General Styles
 ------------------------------------*/
+@font-face {
+    font-family: 'Pinar';
+    src: url('../fonts/Pinar.woff2') format('woff2'),
+        url('../fonts/Pinar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
+    font-family: 'Pinar', sans-serif;
     background-color: #9683FA;
 }
 
 .form-body {
     background-color: #9683FA;
+    font-family: 'Pinar', sans-serif !important;
 }
 
 .website-logo {
@@ -132,7 +143,15 @@ body {
 .form-content .form-items {
     max-width: 340px;
     text-align: center;
+    background: #35129b;
+    border: 2px solid #000000;
+    border-radius: 18px;
+    padding: 40px 32px;
+    max-width: 420px;
+    margin: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
 }
+
 
 .form-content .form-items.with-bg {
     background-color: #fff;

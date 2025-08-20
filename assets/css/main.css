@@ -48,6 +48,15 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+    font-family: 'Pinar';
+    src: url('../fonts/Pinar.woff2') format('woff2'),
+        url('../fonts/Pinar.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -351,7 +360,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-    font-family: monospace, monospace;
+    font-family: 'Pinar', sans-serif;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -394,7 +403,7 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: 'Pinar', sans-serif;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -447,7 +456,7 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
+    font-family: 'Pinar', sans-serif;
     /* 1 */
     font-size: 100%;
     /* 1 */
@@ -643,7 +652,7 @@ body {
     color: #536479;
     line-height: 30px;
     overflow-x: hidden;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Pinar', sans-serif;
     background: #ffffff;
 }
 
@@ -657,7 +666,7 @@ h6 {
     margin: 0;
     line-height: 1.4;
     color: #0d1856;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Pinar', sans-serif;
 }
 
 h1 a,
@@ -1857,7 +1866,7 @@ select {
 .menu-item-has-children>a::after {
     content: "\f107";
     font-weight: 600;
-    font-family: "Line Awesome Free";
+    font-family: 'Pinar', sans-serif;
     margin-left: 5px;
 }
 
@@ -1922,6 +1931,8 @@ select {
 .header-buttons {
     margin: -5px;
     display: flex;
+
+
 }
 
 @media (min-width: 768px) {
@@ -4391,7 +4402,7 @@ div[class*="col"]:nth-of-type(4n + 4)>.about__list__card {
 
 .manage-portfolio-item.style-two::before {
     content: "\f00c";
-    font-family: "Line Awesome Free";
+    font-family: 'Pinar', sans-serif;
     font-weight: 600;
     width: 25px;
     height: 25px;
@@ -4941,7 +4952,7 @@ div[class*="col"]:nth-of-type(4n + 4)>.about__list__card {
     color: #06c8b2;
     content: "\f111";
     font-weight: 600;
-    font-family: "Line Awesome Free";
+    font-family: 'Pinar', sans-serif;
     background: transparent;
     top: 0;
 }
@@ -7945,7 +7956,10 @@ textarea {
     }
 
     .hero-section-2 .bubble {
-        position: relative;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        margin: 6px;
         width: 120px;
         height: 120px;
         font-size: 13px;

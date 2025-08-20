@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>داشبورد | BTT</title>
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <link rel="stylesheet" href="./assets/css/owl.min.css" />
+    <link rel="stylesheet" href="./assets/css/odometer.css" />
+    <link rel="stylesheet" href="./assets/css/nice-select.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+
+    <link rel="preload" href="/assets/fonts/Pinar.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="shortcut icon" href="assets/images/logo/Logo BTT.png" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-area d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <a class="d-flex align-items-center" href="#">
+                        <img class="logo" src="assets/images/logo/Logo BTT.png" alt="BTT">
+                    </a>
+
+                    <!-- پروفایل کوچک با XP Bar -->
+                    <div class="d-none d-md-flex align-items-center gap-3">
+                        <div class="profile-mini">
+                            <img id="headerAvatar" src="https://i.pravatar.cc/100?img=12" alt="avatar" />
+                            <div>
+                                <div class="text-white small" id="headerName">علی رضایی</div>
+                                <div class="text-muted-2 small">Diamond II · Lv 42</div>
+                                <div class="xp-bar mt-1" style="width:180px">
+                                    <span id="xpFillHeader" data-xp-percent="64"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <div class="stat-pill d-none d-md-flex align-items-center gap-2">
+                        <i class="las la-coins"></i><span class="text-white"> 1,250 </span>
+                        <span class="text-muted-2">کوین</span>
+                    </div>
+                    <button class="btn position-relative" aria-label="اعلان‌ها" title="اعلان‌ها">
+                        <i class="las la-bell text-white fs-4"></i>
+                        <span id="notifDot"
+                            class="position-absolute top-0 start-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                    </button>
+                    <a href="login.html" class="cmn--btn">خروج</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Nav -->
+    <nav class="side-nav" aria-label="منوی اصلی">
+        <div class="title">منو</div>
+        <a href="#home" data-view="home" class="active"><i class="las la-home"></i><span>خانه</span></a>
+        <a href="#competitions" data-view="competitions"><i class="las la-flag-checkered"></i><span>مسابقات</span></a>
+        <a href="#rules" data-view="rules"><i class="las la-scroll"></i><span>قوانین و راهنما</span></a>
+        <a href="#stats" data-view="stats"><i class="las la-chart-area"></i><span>آمار و عملکرد</span></a>
+        <a href="#achievements-section" data-view="achievements-section"><i
+                class="las la-trophy"></i><span>اچیومنت‌ها</span></a>
+        <a href="#community" data-view="community"><i class="las la-users"></i><span>جامعه</span></a>
+        <a href="#shop" data-view="shop"><i class="las la-store"></i><span>فروشگاه</span></a>
+        <a href="#account" data-view="account"><i class="las la-user-cog"></i><span>حساب کاربری</span></a>
+    </nav>
+
+    <main class="dashboard">
+        <div class="container">
+
+            <!-- VIEW: خانه (پیش‌فرض فعال) -->
+            <section class="view active" id="view-home">
+                <div class="row g-4" id="home">
+                    <div class="col-12 col-xl-8">
+                        <div class="card h-100">
+                            <div
+                                class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2 p-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="rank-badge"><i class="las la-trophy"></i> Diamond II</span>
+                                    <span class="chip">MMR: <strong id="mmr">2,180</strong></span>
+                                    <span class="chip">Level: <strong id="level">42</strong></span>
+                                </div>
+                                <div class="text-muted-2 small">آخرین آپدیت: <span id="lastUpdate">—</span></div>
+                            </div>
+
+                            <div class="card-body p-4">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-md-7">
+                                        <h5 class="text-white mb-2">پیشرفت تا لول بعدی</h5>
+                                        <div class="xp-bar mb-2" aria-label="نوار تجربه">
+                                            <span id="xpFill2" data-xp-percent="64"></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted-2 small mb-3">
+                                            <span>XP: <b id="xp">6,420</b> / <b id="xpNext">10,000</b></span>
+                                            <span>+Boost فعال</span>
+                                        </div>
+
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <div class="stat-pill"><i class="las la-percentage me-1"></i> Win Rate:
+                                                <b>58%</b>
+                                            </div>
+                                            <div class="stat-pill"><i class="las la-chart-line me-1"></i> Profit Factor:
+                                                <b>1.45</b>
+                                            </div>
+                                            <div class="stat-pill"><i class="las la-wave-square me-1"></i> Max DD:
+                                                <b>12%</b>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <div class="card-cta p-3 rounded-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <h6 class="text-white m-0">مسابقه ویژه شنبه ۲۳ آگوست</h6>
+                                                <span class="chip">ورودی: 10$</span>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                                <div class="text-muted-2">شروع بعدی در:</div>
+                                                <div class="display-6 text-white" id="countdown" aria-live="polite">
+                                                    —:—:—</div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <span class="text-muted-2">استخر فعلی</span>
+                                                <span class="text-white fw-bold" id="pool">$ 12,450</span>
+                                            </div>
+                                            <a href="#competitions" class="btn btn-gradient w-100 mt-2" id="joinBtn">
+                                                <i class="las la-rocket ms-1"></i> شرکت در مسابقه امروز
+                                            </a>
+                                            <div class="form-text text-muted-2 mt-2">
+                                                فعلاً XP بر اساس «شرکت/ترید موفق/سود» محاسبه می‌شود.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-4" />
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="mission">
+                                            <i class="las la-bullseye text-white"></i>
+                                            <div>
+                                                <div class="text-white">ماموریت روزانه: ثبت ۳ ترید</div>
+                                                <div class="text-muted-2 small">پاداش: XP حداقلی</div>
+                                            </div>
+                                            <button class="cmn--btn ms-auto">شروع</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mission">
+                                            <i class="las la-calendar-check text-white"></i>
+                                            <div>
+                                                <div class="text-white">Streak: 5/7 روز</div>
+                                                <div class="text-muted-2 small">XP تکمیلی بعداً نهایی می‌شود</div>
+                                            </div>
+                                            <button class="cmn--btn btn--transparent ms-auto">جزئیات</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-4">
+                        <div class="card mb-4" id="leaderboard">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-medal ms-1"></i> رتبه اخیر شما</h6>
+                                <span class="chip">Top 10%</span>
+                            </div>
+                            <div class="card-body p-0">
+                                <table class="table table-darkish align-middle mb-0">
+                                    <tbody id="lbBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card" id="achievements">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-trophy ms-1"></i> هایلایت اچیومنت</h6>
+                                <a class="text-muted-2 small" href="#achievements-section">همه</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="achv">
+                                        <i class="las la-award text-white"></i>
+                                        <div>
+                                            <div class="text-white">ورود به Top 10%</div>
+                                            <div class="text-muted-2 small">سود مثبت در مسابقه اخیر</div>
+                                        </div>
+                                    </div>
+                                    <div class="achv">
+                                        <i class="las la-star text-white"></i>
+                                        <div>
+                                            <div class="text-white">رکورد سود روزانه</div>
+                                            <div class="text-muted-2 small">دوره ۳۰ روزه</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: مسابقات -->
+            <section class="view" id="view-competitions">
+                <div class="row g-4 mt-1" id="competitions">
+                    <div class="col-12 col-xxl-8">
+                        <div class="card">
+                            <div
+                                class="card-header p-3 d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                <h6 class="m-0 text-white"><i class="las la-flag-checkered ms-1"></i> مسابقات فعال</h6>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-muted-2 small">فیلتر:</span>
+                                    <select class="select-bar" id="compFilter">
+                                        <option value="all">همه</option>
+                                        <option value="free">رایگان</option>
+                                        <option value="classic">کلاسیک</option>
+                                        <option value="vip">ویژه</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3" id="compCards"></div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-record-vinyl ms-1"></i> ریپلی مسابقات قبلی
+                                </h6>
+                                <a class="text-muted-2 small" href="#">مشاهده همه</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="text-white">ریپلی #1021</div>
+                                                <span class="chip">Top 10%</span>
+                                            </div>
+                                            <div class="text-muted-2 small mt-1">BTCUSD · 3 روز دیتا</div>
+                                            <a href="#" class="cmn--btn btn--white mt-2">مشاهده</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="text-white">ریپلی #1016</div>
+                                                <span class="chip">Top 25%</span>
+                                            </div>
+                                            <div class="text-muted-2 small mt-1">EURUSD · 2.5 روز دیتا</div>
+                                            <a href="#" class="cmn--btn btn--white mt-2">مشاهده</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-xxl-4">
+                        <div class="card h-100" id="rules-box">
+                            <div class="card-header p-3">
+                                <h6 class="m-0 text-white"><i class="las la-scroll ms-1"></i> قوانین خلاصه</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul class="text-muted-2 mb-3">
+                                    <li>شنبه ۲۳ آگوست، ساعت 09:00 تا 22:00</li>
+                                    <li>هزینه ورودی: 10 دلار</li>
+                                    <li>دراودان کلی: 10٪ · ریسک شناور: 3٪</li>
+                                    <li>تعداد کندل: حدود 1000 تا 3000 (~3 روز)</li>
+                                    <li>نماد: از بین نمادهای پرحجم فارکس/کریپتو — <a href="#"
+                                            class="text-decoration-underline">جزئیات در قوانین کامل</a></li>
+                                    <li>جوایز: تقسیم سود از استخر</li>
+                                </ul>
+                                <div class="text-white mb-2">شفافیت:</div>
+                                <ul class="text-muted-2 small">
+                                    <li>سیستم ضد تقلب فعال (تشخیص رفتار غیرعادی/اکانت‌های موازی)</li>
+                                    <li>محاسبه و توزیع جوایز به‌صورت آنی</li>
+                                    <li>نمایش قرارداد هوشمند (درحال توسعه)</li>
+                                </ul>
+                                <a href="error-404.html" class="cmn--btn btn--transparent mt-2">مطالعه کامل قوانین</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: قوانین (به صورت جداگانه) -->
+            <section class="view" id="view-rules">
+                <div class="row g-4">
+                    <div class="col-12 col-xxl-6">
+                        <div class="card h-100">
+                            <div class="card-header p-3">
+                                <h6 class="m-0 text-white"><i class="las la-scroll ms-1"></i> قوانین کامل</h6>
+                            </div>
+                            <div class="card-body text-muted-2">
+                                <p>اینجا متن قوانین کامل مسابقات/پلتفرم شما قرار می‌گیرد. می‌توانید آن را به صفحات جدا
+                                    هم لینک دهید.</p>
+                                <ul>
+                                    <li>حداکثر دراودان و ریسک حساب</li>
+                                    <li>شرایط برداشت جوایز</li>
+                                    <li>KYC و ملاحظات امنیتی</li>
+                                    <li>سیاست ضد تقلب و اکانت‌های موازی</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xxl-6">
+                        <div class="card h-100">
+                            <div class="card-header p-3">
+                                <h6 class="m-0 text-white"><i class="las la-question-circle ms-1"></i> سوالات متداول
+                                </h6>
+                            </div>
+                            <div class="card-body text-muted-2">
+                                <p><b>چطور ثبت‌نام کنم؟</b> از بخش مسابقات روی دکمه ورود کلیک کنید.</p>
+                                <p><b>محاسبه XP چطور انجام می‌شود؟</b> فعلاً بر اساس شرکت، ترید موفق و سود.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: آمار -->
+            <section class="view" id="view-stats">
+                <div class="row g-4 mt-1" id="stats">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-chart-area ms-1"></i> آمار و عملکرد</h6>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-muted-2 small">بازه:</span>
+                                    <select class="select-bar" id="rangeSel">
+                                        <option>۳۰ روز</option>
+                                        <option>۹۰ روز</option>
+                                        <option>۱ سال</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-lg-8">
+                                        <div class="p-3 border rounded-3 border-soft" id="eqCurve" style="height:280px">
+                                            <div class="text-muted-2">نمودار Equity Curve (Placeholder)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <div class="stat-pill d-flex justify-content-between"><span>Win /
+                                                    Loss</span><b>58% / 42%</b></div>
+                                            <div class="stat-pill d-flex justify-content-between"><span>Profit
+                                                    Factor</span><b>1.45</b></div>
+                                            <div class="stat-pill d-flex justify-content-between"><span>Avg
+                                                    R:R</span><b>1:1.8</b></div>
+                                            <div class="stat-pill d-flex justify-content-between"><span>Max
+                                                    Drawdown</span><b>12%</b></div>
+                                            <div class="stat-pill d-flex justify-content-between"><span>مقایسه با
+                                                    میانگین جامعه</span><b>+9%</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: اچیومنت‌ها -->
+            <section class="view" id="view-achievements-section">
+                <div class="row g-4 mt-1" id="achievements-section">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-trophy ms-1"></i> اچیومنت‌ها و مسیر پیشرفت
+                                </h6>
+                                <a class="text-muted-2 small" href="#">همه</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="text-white mb-2">Badge Wall</div>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <span class="chip">Top 10%</span>
+                                                <span class="chip">Streak 7d</span>
+                                                <span class="chip">Profit > 5%</span>
+                                                <span class="chip">First Win</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="text-white mb-2">ماموریت‌ها</div>
+                                            <ul class="text-muted-2 mb-0 small">
+                                                <li>Daily: ثبت ۳ ترید (XP حداقلی)</li>
+                                                <li>Weekly: ۵ روز فعالیت (XP تکمیلی)</li>
+                                                <li>Lifetime: ۱۰۰ ترید موفق</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="text-white mb-2">Progression Path</div>
+                                            <div class="text-muted-2 small">Bronze → Silver → Gold → Platinum → Diamond
+                                                → Master → Legend</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: جامعه -->
+            <section class="view" id="view-community">
+                <div class="row g-4 mt-1" id="community">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-users ms-1"></i> جامعه</h6>
+                                <a class="text-muted-2 small" href="#">ورود به فروم</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="text-white">دوستان</div>
+                                            <ul class="text-muted-2 small mb-0 mt-1">
+                                                <li>MinaFX — Master I</li>
+                                                <li>Ali_Rez — Diamond II</li>
+                                                <li>Nika — Gold I</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 border-soft">
+                                            <div class="text-white">ریپلی‌های به‌اشتراک‌گذاشته‌شده</div>
+                                            <ul class="text-muted-2 small mb-0 mt-1">
+                                                <li>BTCUSD — الگوی شکست سقف</li>
+                                                <li>EURUSD — ریورس در حمایت</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: فروشگاه -->
+            <section class="view" id="view-shop">
+                <div class="row g-4 mt-1" id="shop">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-store ms-1"></i> فروشگاه / Subscription</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 h-100 border-soft">
+                                            <div class="text-white mb-1">Free</div>
+                                            <ul class="text-muted-2 small mb-3">
+                                                <li>مسابقات عمومی</li>
+                                                <li>محدودیت ابزارها</li>
+                                            </ul>
+                                            <a class="cmn--btn btn--white w-100" href="#">فعال</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 h-100 border-soft">
+                                            <div class="text-white mb-1">Pro</div>
+                                            <ul class="text-muted-2 small mb-3">
+                                                <li>مسابقات ویژه</li>
+                                                <li>تحلیل‌های پیشرفته</li>
+                                                <li>XP Boost</li>
+                                            </ul>
+                                            <a class="cmn--btn w-100" href="#">ارتقا</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="p-3 border rounded-3 h-100 border-soft">
+                                            <div class="text-white mb-1">Elite</div>
+                                            <ul class="text-muted-2 small mb-3">
+                                                <li>جایزه‌های انحصاری</li>
+                                                <li>کلاب VIP</li>
+                                                <li>اسکین‌ها و آیتم تزئینی</li>
+                                            </ul>
+                                            <a class="cmn--btn btn--transparent w-100" href="#">جزئیات</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIEW: حساب کاربری -->
+            <section class="view" id="view-account">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-8">
+                        <div class="card">
+                            <div class="card-header p-3 d-flex justify-content-between align-items-center">
+                                <h6 class="m-0 text-white"><i class="las la-user-cog ms-1"></i> حساب کاربری</h6>
+                                <span class="chip" id="accountStatus">—</span>
+                            </div>
+                            <div class="card-body">
+                                <form id="accountForm" class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">نام و نام‌خانوادگی</label>
+                                        <input type="text" class="form-control" id="accName"
+                                            placeholder="مثلاً: علی رضایی">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">نام نمایشی (Username)</label>
+                                        <input type="text" class="form-control" id="accUsername"
+                                            placeholder="مثلاً: Ali_Rez">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">ایمیل</label>
+                                        <input type="email" class="form-control" id="accEmail"
+                                            placeholder="you@example.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">شماره موبایل</label>
+                                        <input type="tel" class="form-control" id="accPhone" placeholder="09xxxxxxxxx">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label class="form-label text-white">آدرس آواتار (اختیاری)</label>
+                                        <input type="url" class="form-control" id="accAvatar" placeholder="https://...">
+                                    </div>
+                                    <div class="col-md-4 d-flex align-items-end">
+                                        <img id="accAvatarPreview" class="leader-avatar"
+                                            src="https://i.pravatar.cc/100?img=12" alt="avatar">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <hr class="border-soft">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">رمز عبور جدید</label>
+                                        <input type="password" class="form-control" id="accPass"
+                                            placeholder="(اختیاری)">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">تأیید رمز عبور</label>
+                                        <input type="password" class="form-control" id="accPass2"
+                                            placeholder="(اختیاری)">
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-end gap-2">
+                                        <button type="button" class="cmn--btn btn--transparent"
+                                            id="resetAccount">بازنشانی</button>
+                                        <button type="submit" class="btn btn-gradient">ذخیره تغییرات</button>
+                                    </div>
+                                </form>
+                                <div class="form-text text-muted-2 mt-2">
+                                    * برای نمونه، داده‌ها در مرورگر شما (localStorage) ذخیره می‌شوند.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card">
+                            <div class="card-header p-3">
+                                <h6 class="m-0 text-white"><i class="las la-id-card ms-1"></i> نمایه</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img id="accSidebarAvatar" class="leader-avatar"
+                                        src="https://i.pravatar.cc/100?img=12" alt="avatar">
+                                    <div>
+                                        <div class="text-white" id="accSidebarName">علی رضایی</div>
+                                        <div class="text-muted-2 small" id="accSidebarUsername">@Ali_Rez</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2 mt-3">
+                                    <span class="chip">رتبه: Diamond II</span>
+                                    <span class="chip">Lv 42</span>
+                                    <span class="chip">XP Boost</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section-2 bg-2 mt-5">
+        <div class="container py-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <div class="text-white small">© تمامی حقوق متعلق به BTT</div>
+                <div class="d-flex align-items-center gap-3">
+                    <a class="text-white-50 small" href="contact.html">پشتیبانی / تیکت</a>
+                    <a class="text-white-50 small" href="#rules">شرایط و قوانین</a>
+                    <a class="text-white-50 small" href="about.html">درباره ما</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor JS -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/viewport.jquery.js"></script>
+    <script src="./assets/js/nice-select.js"></script>
+
+    <!-- App JS -->
+    <script src="./assets/js/dashboard.js"></script>
+</body>
+
+</html>

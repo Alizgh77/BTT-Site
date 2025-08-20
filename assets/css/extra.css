@@ -1,0 +1,926 @@
+/* From Uiverse.io by Yaya12085 */
+button {
+    max-width: 320px;
+    justify-content: center;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    gap: 0.75rem;
+    color: rgb(65, 63, 63);
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .6s ease;
+    margin: 20px auto;
+    font-family: 'Pinar', sans-serif;
+}
+
+.button svg {
+    height: 24px;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+.rtl-input {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Pinar', sans-serif;
+}
+
+
+.card {
+    width: 320px;
+    /* دسکتاپ بزرگ */
+    height: 380px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: 'Pinar', sans-serif;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 160%;
+    background-image: linear-gradient(180deg, #b023f1, #35129b);
+    animation: rotBGimg 3s linear infinite;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #fff;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 25px;
+}
+
+.card-content img {
+    width: 100px;
+    /* دسکتاپ */
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+.card-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #536479;
+}
+
+.card-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #536479;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 📱 نسخه موبایل */
+@media (max-width: 768px) {
+    .card {
+        width: 240px;
+        /* کوچکتر برای موبایل */
+        height: 300px;
+    }
+
+    .card-content img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 18px;
+    }
+
+    .card-content h4 {
+        font-size: 18px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+    text-align: center;
+    font-family: 'Pinar', sans-serif;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.plan-header {
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    color: #fff;
+    font-weight: 700;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.plan-body {
+    padding: 25px 20px;
+    color: #536479;
+}
+
+.plan-subtitle {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: right;
+}
+
+.plan-features li {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.plan-price {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.plan-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.plan-btn:hover {
+    background: linear-gradient(90deg, #35129b, #b023f1);
+}
+
+.contact-section {
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5ff 100%);
+    font-family: 'Pinar', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* المان های پس زمینه شیشه‌ای */
+.contact-section::before,
+.contact-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+}
+
+.contact-section::before {
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: #b023f1;
+}
+
+.contact-section::after {
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: #35129b;
+}
+
+.section-title {
+    color: #35129b;
+    padding-top: 60px;
+}
+
+.section-subtitle {
+    color: #536479;
+}
+
+/* کارت‌ها */
+.contact-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(176, 35, 241, 0.25);
+}
+
+.contact-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    transition: color .3s;
+    color: #b023f1;
+}
+
+.contact-card:hover .contact-icon {
+    color: #35129b;
+}
+
+.contact-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #35129b;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #536479;
+}
+
+/* فرم */
+.contact-form .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: border .3s, box-shadow .3s;
+}
+
+.contact-form .form-control:focus {
+    border-color: #b023f1;
+    box-shadow: 0 0 12px rgba(176, 35, 241, 0.25);
+    outline: none;
+}
+
+.contact-btn {
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s, background .4s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    box-shadow: 0 8px 20px rgba(176, 35, 241, 0.4);
+}
+
+/* فاصله بیشتر بالای سکشن */
+.contact-section {
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5ff 100%);
+    font-family: 'Pinar', sans-serif;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    /* بالاتر از قبل */
+}
+
+/* کارت تماس */
+.contact-card {
+    background: -moz-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -webkit-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    background: -ms-linear-gradient(0deg, #b023f1 0%, #35129b 100%);
+    border-radius: 16px;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Pinar', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* آیکون‌ها */
+.contact-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #fff;
+    /* سفید */
+}
+
+.contact-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #fff;
+    font-family: 'Pinar', sans-serif;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Pinar', sans-serif;
+}
+
+.footer-logo-img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}
+
+
+/* ========== Plan Cards ========== */
+.plan-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.plan-card.hover-pop:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .15);
+}
+
+.plan-header {
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.plan-body {
+    padding: 24px;
+}
+
+.plan-subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #35129b;
+    margin-bottom: 12px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.plan-features li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px;
+}
+
+.plan-price {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.plan-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #35129b;
+    color: #fff;
+    border: none;
+    transition: background .3s ease;
+}
+
+.plan-btn:hover {
+    background: #b023f1;
+}
+
+/* ========== Compare Table ========== */
+.compare-table th {
+    background: #35129b;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px;
+    font-family: "Pinar", sans-serif;
+}
+
+.compare-table td {
+    background: #fff;
+    padding: 14px;
+    font-family: "Pinar", sans-serif;
+}
+
+.compare-table tbody tr:nth-child(even) td {
+    background: #f9f9ff;
+}
+
+.compare-table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+/* ========== How it works ========== */
+.how-card {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    transition: all .3s ease;
+    font-family: "Pinar", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(176, 35, 241, 0.15);
+    /* رنگ بنفش سایت */
+}
+
+/* شماره مرحله */
+.how-card .step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #b023f1, #35129b);
+    color: #fff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(53, 18, 155, 0.3);
+}
+
+/* تیتر */
+.how-card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #35129b;
+}
+
+/* توضیحات */
+.how-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #536479;
+    /* رنگ متن اصلی سایت */
+    margin: 0;
+}
+
+/* ========== FAQ Section ========== */
+.faq-section {
+    background: #fafafa;
+    font-family: "Pinar", sans-serif;
+}
+
+.faq-accordion .accordion-item {
+    border: none;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+    font-weight: 600;
+    font-size: 15px;
+    color: #35129b;
+    background: #fff;
+    transition: background .3s ease, color .3s ease;
+}
+
+.faq-accordion .accordion-button::after {
+    font-family: 'Pinar', sans-serif;
+    font-weight: 900;
+    content: "\f078";
+}
+
+/* Compare Table */
+.compare-table {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    background: #fff;
+}
+
+.compare-table th {
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    color: #fff;
+    font-weight: 600;
+}
+
+.compare-table td {
+    padding: 14px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* How It Works */
+.step-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    transition: transform .3s;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+}
+
+.step-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #b023f1;
+}
+
+/* FAQ */
+.faq-accordion .accordion-item {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
+}
+
+.faq-accordion .accordion-button {
+    background: #fff;
+    font-weight: 600;
+    color: #35129b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-accordion .accordion-button::after {
+    display: none;
+}
+
+.faq-accordion .faq-icon {
+    margin-left: 8px;
+    font-weight: bold;
+    transition: transform .3s;
+}
+
+.accordion-button:not(.collapsed) .faq-icon {
+    transform: rotate(45deg);
+    color: #b023f1;
+}
+
+.faq-accordion .accordion-body {
+    background: #f9f9ff;
+    padding: 18px;
+    color: #444;
+}
+
+/* حالت اولیه – شفاف */
+.header-section.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* وقتی اسکرول میشه */
+.header-section.header-fixed.active {
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Rules Section (Bigger & Clear) ========== */
+.rule-card {
+    position: relative;
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 28px;
+    /* بزرگتر از قبل */
+    border: 1px solid #eee;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    text-align: right;
+    font-family: 'Pinar', sans-serif;
+    animation: rule-rise .6s ease both;
+    min-height: 220px;
+    /* ارتفاع پایه */
+}
+
+/* نوار گرادیانی سمت راست */
+.rule-card::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    /* کمی پهن‌تر */
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(180deg, #b023f1, #35129b);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .4s ease;
+}
+
+/* عنوان */
+.rule-card h5 {
+    color: #35129b;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    /* بزرگ‌تر */
+    line-height: 1.4;
+}
+
+/* متن */
+.rule-card p {
+    color: #536479;
+    font-size: 1rem;
+    /* کمی بزرگ‌تر */
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Hover */
+.rule-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .12);
+    border-color: transparent;
+}
+
+.rule-card:hover::after {
+    transform: scaleY(1);
+}
+
+/* انیمیشن ورود */
+@keyframes rule-rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== About Page Section  ========== */
+.about-section .about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #536479;
+    margin-bottom: 18px;
+    font-family: 'Pinar', sans-serif;
+}
+
+/* Highlight / Values Section */
+.value-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+    font-family: 'Pinar', sans-serif;
+    min-height: 280px;
+}
+
+.value-card i {
+    font-size: 40px;
+    color: #b023f1;
+    margin-bottom: 14px;
+}
+
+.value-card h5 {
+    color: #35129b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    padding-top: 12px;
+    font-family: 'Pinar', sans-serif;
+}
+
+.value-card p {
+    color: #536479;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: 'Pinar', sans-serif;
+    padding-top: 36px;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, .1);
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    margin: 50px auto 0;
+    padding-left: 20px;
+    border-left: 3px solid #b023f1;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #f4f0fb;
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+    font-family: 'Pinar', sans-serif;
+}
+
+.timeline-content:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+}
+
+.timeline-content h5 {
+    color: #35129b;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-family: 'Pinar', sans-serif;
+}
+
+.timeline-content .timeline-date {
+    display: block;
+    font-size: .9rem;
+    color: #b023f1;
+    margin-bottom: 10px;
+    font-family: 'Pinar', sans-serif;
+}
+
+.timeline-content p {
+    font-size: .95rem;
+    color: #536479;
+    line-height: 1.6;
+    font-family: 'Pinar', sans-serif;
+}
+
+/* ========== Contact Page ========== */
+.contact-info .info-card {
+    background: linear-gradient(90deg, #b023f1, #35129b);
+    color: #fff;
+    padding: 28px 24px;
+    border-radius: 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    transition: transform .35s ease, box-shadow .35s ease;
+    min-height: 120px;
+    font-family: 'Pinar', sans-serif;
+}
+
+.contact-info .info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+}
+
+.contact-info i {
+    font-size: 32px;
+    background: #fff;
+    color: #35129b;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    transition: background .3s, color .3s;
+}
+
+.contact-info .info-card:hover i {
+    background: #b023f1;
+    color: #fff;
+}
+
+.contact-info h6 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-family: 'Pinar', sans-serif;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: .95rem;
+    opacity: .9;
+    font-family: 'Pinar', sans-serif;
+}
+
+
+.contact-form {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    font-family: 'Pinar', sans-serif;
+}
+
+.contact-form h4 {
+    color: #35129b;
+    font-family: 'Pinar', sans-serif;
+}
+
+.form--control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-family: 'Pinar', sans-serif;
+}
+
+.form--control:focus {
+    border-color: #b023f1;
+    box-shadow: 0 0 0 3px rgba(176, 35, 241, .2);
+}
+
+.cmn--btn {
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    transition: transform .3s ease;
+    font-family: 'Pinar', sans-serif;
+}
+
+.cmn--btn:hover {
+    transform: translateY(-3px);
+}
